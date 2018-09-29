@@ -47,3 +47,15 @@ function findLongestWordLength(str) {
   // Return the number of letters in the longest word in a string
   return longestWordLength;
 } 
+
+// loop through an array of subarrays and return largest number of each subarray in new array
+function largestOfFour(arr) {
+  // new array for largest numbers
+  const newArr = [];
+  // loop through arrays and sort highest to lowest
+  arr.forEach(subarr => {subarr.sort( (a, b) => b - a )
+    // push highest to new array
+    newArr.push(subarr[0]);
+  });
+  return newArr;
+}
